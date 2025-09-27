@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Dogs Sniff - Interactive Storybook Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page-0" class="page active">
+        <div class="illustration-placeholder home-illustration">
+            FULL IMAGE 1
+        </div>
+        <div class="title-group">
+            <h1>WHY DOGS SNIFF</h1>
+            <p>A Folktale by JUDE THOMAS</p>
+        </div>
+        <button class="button home-button" data-next-page="1">START</button>
+    </div>
+
+    <div id="page-1" class="page story-page">
+        <div class="illustration-placeholder">
+           FULL IMAGE 2
+            <span class="read-aloud-icon" data-page-index="1" title="Read Aloud">🔊</span>
+        </div>
+        <div class="narration-box story-layout">
+            <span class="story-text wide-text" id="text-1">
+                Placeholder Narration Text for Page 1. This is the beginning of the great tale of how dogs began to sniff!
+            </span>
+            <span class="navigation-arrow next-arrow" data-next-page="2">&#10095;</span>
+        </div>
+    </div>
+
+    <div id="page-2" class="page story-page">
+        <div class="illustration-placeholder">
+            FULL IMAGE 3
+            <span class="read-aloud-icon" data-page-index="2" title="Read Aloud">🔊</span>
+        </div>
+        <div class="narration-box story-layout">
+            <span class="navigation-arrow prev-arrow" data-next-page="1">&#10094;</span>
+            <span class="story-text wide-text" id="text-2">
+                So the dogs hung their tails on the branches of the tallest tree.
+            </span>
+            <span class="navigation-arrow next-arrow" data-next-page="3">&#10095;</span>
+        </div>
+    </div>
+
+    <div id="page-3" class="page story-page">
+        <div class="illustration-placeholder">
+           FULL IMAGE 4
+            <span class="read-aloud-icon" data-page-index="3" title="Read Aloud">🔊</span>
+        </div>
+        <div class="narration-box story-layout">
+            <span class="navigation-arrow prev-arrow" data-next-page="2">&#10094;</span>
+            <span class="story-text wide-text" id="text-3">
+                Placeholder Narration Text for Page 3. Oh no! Chaos strikes and all the tails are accidentally mixed up!
+            </span>
+            <span class="navigation-arrow next-arrow" data-next-page="4">&#10095;</span>
+        </div>
+    </div>
+
+    <div id="page-4" class="page story-page">
+        <div class="illustration-placeholder">
+           FULL IMAGE 5
+            <span class="read-aloud-icon" data-page-index="4" title="Read Aloud">🔊</span>
+        </div>
+        <div class="narration-box story-layout">
+            <span class="navigation-arrow prev-arrow" data-next-page="3">&#10094;</span>
+            <span class="story-text wide-text" id="text-4">
+                Placeholder Narration Text for Page 4. And that is why, to this day, dogs sniff each other: they're still looking for their original tails!
+            </span>
+            <span class="navigation-arrow next-arrow end-story" data-next-page="5">End Story &#10095;</span>
+        </div>
+    </div>
+
+    <div id="page-5" class="page">
+        <div class="the-end-banner">
+            THE END
+        </div>
+        <div class="credits-list">
+            <p><strong>Story Concept:</strong> JUDE THOMAS</p>
+            <p><strong>Design:</strong> JUDE THOMAS</p>
+            <p><strong>Illustrations:</strong> JUDE THOMAS</p>
+            <p><strong>Development:</strong> JUDE THOMAS</p>
+        </div>
+        <button class="button" data-next-page="0">READ AGAIN</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
