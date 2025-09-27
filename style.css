@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page {
+    /* Defines the maximum size of the book frame */
+    width: 100vw;
+    height: 100vh;
+    max-width: 800px; 
+    max-height: 600px; 
+    background-color: white;
+    position: absolute; 
+    display: none; 
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.page.active {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+
+
+.illustration-placeholder {
+    /* Makes the illustration fill the entire frame */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Background layer */
+    
+    
+    background-color: #f7a052; 
+    background-image: url('illustration-page-2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Speaker Icon (Matches Blue Icon in Image) */
+.read-aloud-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5em; 
+    cursor: pointer;
+    color: rgb(75, 140, 219); 
+    z-index: 10; 
+    transition: color 0.2s, transform 0.1s; 
+    user-select: none; 
+}
+
+/* HOVER EFFECT FOR READ ALOUD ICON */
+.read-aloud-icon:hover {
+    color: rgb(50, 100, 160); /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* --- HOVERING NARRATION BOX (Matches Image Look) --- */
+.narration-box {
+    /* Positions the box to float at the bottom */
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 5; 
+    width: 90%;
+    min-height: 20%;
+    /* Semi-transparent black background, visible but readable text */
+    background-color: rgba(0, 0, 0, 0.65); 
+    color: white;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.narration-box.story-layout {
+   
+    display: grid;
+    grid-template-columns: min-content 1fr min-content; 
+    align-items: center;
+    padding: 15px 0; 
+}
+
+.navigation-arrow {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px 15px; 
+    color: rgb(207, 205, 205);
+    user-select: none;
+    transition: color 0.2s;
+    white-space: nowrap; 
+}
+
+/* Fix for Navigation Arrow Hover */
+.narration-box .navigation-arrow:hover {
+    color: white;
+}
+
+.story-text {
+    font-size: 1.25em; 
+    font-weight: bold; 
+    padding: 0 10px; 
+    line-height: 1.4;
+    text-align: center; 
+    flex-grow: 1; 
+}
+
+.button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px;
+    z-index: 5;
+}
+
+/* HOVER EFFECT FOR GENERAL BUTTONS (including 'Read Again') */
+.button:hover {
+    background-color: #3ac43f; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a lift effect */
+}
+
+
+/* --- HOME PAGE STYLES (Full Image Overlays) --- */
+#page-0 {
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 0; 
+}
+
+#page-0 .title-group {
+    position: absolute;
+    top: 15%; 
+    text-align: center;
+    color: white;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+#page-0 h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+#page-0 p {
+    font-size: 1.2em;
+    color: #f0f0f0; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+#page-0 .home-button {
+    position: absolute;
+    bottom: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(84, 184, 84);
+}
+
+
+/* This specific hover rule overrides the default to ensure the color changes */
+#page-0 .home-button:hover {
+    background-color: rgb(42, 203, 42); 
+}
+/* ----------------------------------------------- */
+
+
+/* --- CREDITS PAGE STYLES (Page 5) --- */
+#page-5 {
+    justify-content: space-between; 
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    padding-top: 10vh; 
+}
+#page-5 .the-end-banner {
+    font-size: 4em;
+    font-weight: bold;
+    color: #E91E63; 
+    margin-bottom: 5vh;
+}
+#page-5 .credits-list {
+    font-size: 1.1em;
+    line-height: 1.8;
+    z-index: 2; 
+    max-width: 70%; 
+    margin: auto; 
+}
